@@ -1,7 +1,7 @@
 ---
 title: "My First Post"
 date: 2023-04-02T23:14:22+05:30
-draft: true
+draft: false
 ---
 
 Fun fact: Those who are pondering that where our spring boot application is scanning for the components. 
