@@ -1,10 +1,10 @@
 ---
 title: "Spring: DI Container"
-date: 2023-04-02T23:14:22+05:30
+date: 2023-04-20T14:02:22+05:30
 draft: false
 ---
 
-The Spring Framework is a popular and widely-used open-source framework for building Java-based       applications. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications, including support for dependency injection, aspect-oriented programming, transaction management, and much more. Spring is designed to simplify the development process and improve the maintainability and scalability of applications. In this article, we will explore the key features of the Spring Framework and how it can be used to build robust, scalable applications.
+The Spring Framework is a popular and widely-used open-source framework for building Java-based applications. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications, including support for dependency injection, aspect-oriented programming, transaction management, and much more. Spring is designed to simplify the development process and improve the maintainability and scalability of applications. In this article, we will explore the key features of the Spring Framework and how it can be used to build robust, scalable applications.
 
 # The Dependency Problem:
 Have you ever had to change a lot of code because of a new simple requirement? Have you ever had a hard time trying to refactor part of an application? Have you ever been in trouble writing unit tests because of components that required other components?
