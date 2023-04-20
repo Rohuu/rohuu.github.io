@@ -1,5 +1,5 @@
 ---
-title: "My First Post"
+title: "@ComponentScan: Spring boot"
 date: 2023-04-02T23:14:22+05:30
 draft: false
 ---
