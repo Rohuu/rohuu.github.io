@@ -1,5 +1,5 @@
 ---
-title: "Why JDBC over Hibernate"
+title: "Why Hibernate over JDBC"
 date: 2023-04-02T23:16:26+05:30
 draft: false
 ---

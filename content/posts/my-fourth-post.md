@@ -10,6 +10,7 @@ draft: false
 In a relational database system, a one-to-many association links two tables based on a Foreign Key column so that the child table record references the Primary Key of the parent table row.
 
 **Mapping**
+
 We have two choices for that:
 1. a unidirectional @OneToMany association
 2. bidirectional @OneToMany association
@@ -20,12 +21,19 @@ We have two choices for that:
 # Unidirectional @OneToMany
 
 @Entity
+
 @Data
+
 @Table(name = "orm_user")
+
 public class User {
+
     @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Integer userId;
+    
     private String userName;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
