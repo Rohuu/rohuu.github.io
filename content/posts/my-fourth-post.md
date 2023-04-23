@@ -20,7 +20,7 @@ We have two choices for that:
 
 # Unidirectional @OneToMany
 
-```
+```java
 @Entity
 @Data
 @Table(name = "orm_user")
@@ -33,10 +33,10 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
 }
-```java
-
-
 ```
+
+
+```java
 @Data
 @Entity
 @Table(name = "orm_address")
@@ -49,7 +49,7 @@ public class Address {
     private String city;
     private String country;
 }
-```java
+```
 
 
 **@GeneratedValue**: If we want to automatically generate the primary key value, we can add the                         @GeneratedValue         annotation. This can use four generation types: AUTO, IDENTITY, SEQUENCE and TABLE. If we don't explicitly specify a value, the generation type defaults to AUTO
@@ -67,7 +67,7 @@ public class Address {
 Let's assume we are inserting data of a user and it's three different addresses(Assumed-data).
 subsequently when we hit APIs and insert data, it executes following SQL queries:
 
-```
+```java
 insert into user (userId, userName)
 values (1,"Rohit")
  
@@ -88,7 +88,7 @@ values (1, 3)
  
 insert into user_address_table (userId, address_id)
 values (1, 4) 
-```java
+```
 
 *What is that! Why there are so many queries executed? And what’s the deal with that user_address_table table anyway?*
         Well, by default, that’s how the unidirectional @OneToMany association works.
@@ -103,19 +103,19 @@ The @JoinColumn annotation helps us specify the column we'll use for joining an 
 relationship. It's usually the side that owns the foreign key. The @JoinColumn annotation defines that actual physical mapping on the **owning side**.
 Here address entity is joining side so we'll use @JoinCoulmn annotation there:
 
-```
+```java
 ...
 @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 @JoinColumn(name = "user_id")
 private List<Address> addresses = new ArrayList<>();
 ...
-```java
+```
 
 The @JoinColumn annotation helps Hibernate to figure out that there is a user_id Foreign Key column in the address table that defines this association.
 
 *With this annotation in place, when persisting the three PostComment entities, we get the following SQL output:*
 
-```
+```java
 insert into user (userId, userName)
 values (1,"Rohit")
  
@@ -133,7 +133,7 @@ update address set user_id = 1 where id = 2
 update address set user_id = 1 where id = 3
 
 update address set user_id = 1 where id = 4
-```java
+```
 
         Well, a bit better! atleast we got rid three tables to two tables now.
 but what’s the purpose of those three update statements?
@@ -144,7 +144,7 @@ Here foriegn key updation statements got executed after the data got inserted to
 
 The best way to map a @OneToMany association is to rely on the @ManyToOne side to propagate all entity state changes:
 
-```
+```java
 @Data
 @Entity
 @Table(name = "orm_user")
@@ -158,9 +158,9 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
 }
-```java
-
 ```
+
+```java
 @Data
 @Entity
 @Table(name = "orm_address")
@@ -176,12 +176,12 @@ public class Address {
     @ManyToOne
     private User user;
 }
-```java
+```
 
 Again we run our application, hit APIs and insert the same pre-assumed data. 
 Hibernate generates just one SQL statement for each persisted PostComment entity:
 
-```
+```java
 insert into user (userId, userName)
 values (1,"Rohit")
  
@@ -193,7 +193,7 @@ values (3,Add2,1245,Add2,Add2)
  
 insert into address (addressId,street,zipCode,city,country)
 values (4,Add3,1345,Add3,Add3)
-```java
+```
 
    Finally, the number of queries are reduced.
 Think of an application in macro level where in each second millions of requests are hitting the server, in the above shown unidirectional mapping it will generate a lot more queries as compared to bidirectional mapping.
