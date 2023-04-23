@@ -20,27 +20,22 @@ We have two choices for that:
 
 # Unidirectional @OneToMany
 
+```
 @Entity
-
 @Data
-
 @Table(name = "orm_user")
-
 public class User {
-
     @Id
-
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private Integer userId;
-    
     private String userName;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
 }
+```
 
-
+```
 @Data
 @Entity
 @Table(name = "orm_address")
@@ -53,14 +48,15 @@ public class Address {
     private String city;
     private String country;
 }
+```
 
 
-*@GeneratedValue*: If we want to automatically generate the primary key value, we can add the @GeneratedValue annotation. This can use four generation types: AUTO, IDENTITY, SEQUENCE and TABLE. If we don't explicitly specify a value, the generation type defaults to AUTO
+**@GeneratedValue**: If we want to automatically generate the primary key value, we can add the @GeneratedValue annotation. This can use four generation types: AUTO, IDENTITY, SEQUENCE and TABLE. If we don't explicitly specify a value, the generation type defaults to AUTO
 
-*cascade*: Entity relationships often depend on the existence of another entity, for example shown here user–Address relationship. Without the user, the Address entity doesn't have any meaning of its own. When we delete the user entity, our Address entity should also get deleted.
+**cascade**: Entity relationships often depend on the existence of another entity, for example shown here user–Address relationship. Without the user, the Address entity doesn't have any meaning of its own. When we delete the user entity, our Address entity should also get deleted.
         **Cascading is the way to achieve this. When we perform some action on the target entity, the same action will be applied to the associated entity.**
 
-*orphanRemoval*: Its usage is to delete orphaned entities from the database. An entity that is no longer attached to its parent is the definition of being an orphan.
+**orphanRemoval**: Its usage is to delete orphaned entities from the database. An entity that is no longer attached to its parent is the definition of being an orphan.
 
     Since we are not using mappedBy and @JoinColumn, hibernate will make three table for that.
 1. user table
