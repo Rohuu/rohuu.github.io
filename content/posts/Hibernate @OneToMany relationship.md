@@ -1,6 +1,6 @@
 ---
 title: "@OneToMany relationship with JPA and Hibernate"
-written by: Rohit Singh Bhandari
+written by: "Rohit Singh Bhandari"
 date: 2023-04-22T15:07:22+05:30
 draft: false
 ---
