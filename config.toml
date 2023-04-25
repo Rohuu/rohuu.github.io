@@ -2,6 +2,10 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My Blogs'
 theme = "tale"
+params:
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
 
 [menu]
   [[menu.main]]
