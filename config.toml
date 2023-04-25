@@ -17,8 +17,8 @@ theme = "tale"
     url = "/posts/"
     weight = 0
     [[menu.main]]
-    identifier = "social"
-    name = "Social"
-    title = "Social"
-    url = "/social/"
+    identifier = "socials"
+    name = "Socials"
+    title = "Socials"
+    url = "/socials/"
     weight = 0
