@@ -9,7 +9,7 @@ draft: false
 ## Introduction:<br>
 In development, it's crucial to learn about software design principles that can help you write clean, maintainable, and scalable code. One such principle is the Single Responsibility Principle (SRP). In this blog post, we will explore what SRP is, why it's important, and provide an example in Java to help solidify understanding.
 
-**What is the Single Responsibility Principle?**<br>
+### What is the Single Responsibility Principle?<br>
 The Single Responsibility Principle states that a class should have only one reason to change. In other words, a class should have a single responsibility or concern. By keeping classes focused on a single task, we improve code readability, maintainability, and reusability.
 
 **Example:**<br>
@@ -43,7 +43,7 @@ Let's say we're developing a simple online shopping application, and we have a c
 
 In the above code snippet, the Order class violates the SRP because it has multiple responsibilities. Let's refactor it to adhere to the SRP:
 
-```
+``` java
     public class Order {
         private List<OrderItem> items;
         private Customer customer;
@@ -75,7 +75,7 @@ In the above code snippet, the Order class violates the SRP because it has multi
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By separating the responsibilities into different classes, we now have a more maintainable and extensible codebase. The Order class is responsible for managing order-related information, the Discount class handles applying discounts, and the InvoiceGenerator class focuses solely on generating invoices.
 
-**Benefits of the Single Responsibility Principle:**<br>
+### Benefits of the Single Responsibility Principle:<br>
 Adhering to the Single Responsibility Principle offers several advantages:
 
 1. Improved code readability: Each class has a clear and focused purpose, making it easier for developers to understand and maintain the codebase.
