@@ -47,14 +47,14 @@ Our application is thriving, and new product types are being introduced regularl
 To adhere to the Open-Closed Principle, we need to refactor our code. The goal is to allow new product types to be added without modifying the existing classes. We can achieve this by introducing an abstract class called Product that provides a common interface for all product types:
 
 ```java
-public abstract class Product {
-    protected String name;
-    protected double price;
+    public abstract class Product {
+        protected String name;
+        protected double price;
 
-    // Constructor, getters, and setters
+        // Constructor, getters, and setters
 
-    public abstract double calculateShippingCost();
-}
+        public abstract double calculateShippingCost();
+    }
 ```
 
 We make the Product class abstract and define the calculateShippingCost() method as an abstract method. Now, any new product type should inherit from the Product class & implement its own version of the calculateShippingCost() method.
@@ -62,17 +62,17 @@ We make the Product class abstract and define the calculateShippingCost() method
 _Let's create a new class called Furniture to demonstrate this extension:_
 
 ```java
-public class Furniture extends Product {
-    private String material;
+    public class Furniture extends Product {
+        private String material;
 
-    // Constructor, getters, and setters
+        // Constructor, getters, and setters
 
-    @Override
-    public double calculateShippingCost() {
-        // Logic for calculating shipping cost for furniture
-        return price * 0.2;
+        @Override
+        public double calculateShippingCost() {
+            // Logic for calculating shipping cost for furniture
+            return price * 0.2;
+        }
     }
-}
 ```
 
 Now, with the Product class and its extension Furniture, we can introduce new product types by extending the Product class without modifying the existing code.
