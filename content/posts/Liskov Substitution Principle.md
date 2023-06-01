@@ -6,7 +6,7 @@ draft: false
 ---
 
 ## Introduction:<br>
-One such principle that plays a crucial role in object-oriented programming is the Liskov Substitution Principle (LSP). Coined by Barbara Liskov, this principle emphasizes the significance of substitutability and inheritance in building reliable and flexible software systems. In this blog, we'll explore the Liskov Substitution Principle and its practical implications.
+One principle that plays a crucial role in object-oriented programming is the Liskov Substitution Principle (LSP). Coined by Barbara Liskov, this principle emphasizes the significance of substitutability and inheritance in building reliable and flexible software systems. In this blog, we'll explore the Liskov Substitution Principle and its practical implications.
 
 ## Understanding the Liskov Substitution Principle:<br>
 At its core, the Liskov Substitution Principle (LSP) is a fundamental principle of object-oriented programming. It states that objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program. In other words, if a piece of code works with a certain type, it should also work with any subtype of that type.
@@ -83,4 +83,4 @@ _The output of the above code will be:_
 &nbsp;&nbsp;&nbsp;&nbsp;As you can see, the calculateArea() method works correctly for both the Shape and Rectangle objects. The LSP allows us to treat the Rectangle object as a valid substitute for the Shape object, maintaining the expected behavior of the program.
 
 ## Conclusion:
-The Liskov Substitution Principle is a crucial principle in object-oriented programming that ensures the substitutability and consistency of objects in an inheritance hierarchy. By adhering to this principle, you can create more maintainable and flexible software systems, promoting code reuse and modularity. Applying the LSP leads to robust and reliable code, as well as improved testability. By understanding and implementing the Liskov Substitution Principle effectively, you can enhance the quality and longevity of your software projects.
+The Liskov Substitution Principle is a crucial principle in object-oriented programming that ensures the substitutability and consistency of objects in an inheritance hierarchy. By adhering to this principle, we can create more maintainable and flexible software systems, promoting code reuse and modularity. Applying the LSP leads to robust and reliable code, as well as improved testability. By understanding and implementing the Liskov Substitution Principle effectively, we can enhance the quality and longevity of your software projects.
