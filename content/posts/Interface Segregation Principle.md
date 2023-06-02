@@ -1,5 +1,5 @@
 ---
-title: "Interface Segregation: SOLID principles"
+title: "Interface Segregation Principle: SOLID principles"
 written by: "Rohit Singh Bhandari"
 date: 2023-06-02T17:15:22+05:30
 draft: false
