@@ -1,7 +1,7 @@
 ---
-title: "Dependency Inversion Principle: SOLID principles"
+title: "How Spring Boot Application Works Internally ?"
 written by: "Rohit Singh Bhandari"
-date: 2023-06-02T17:15:22+05:30
+date: 2023-07-01T17:15:22+05:30
 draft: false
 ---
 
