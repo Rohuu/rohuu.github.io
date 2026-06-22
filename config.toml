@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My Blogs'
+title = 'My Understandings'
 theme = "tale"
 
 [menu]
