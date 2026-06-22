@@ -2,6 +2,7 @@
 title: "Using AI Efficiently"
 date: 2026-06-22
 draft: false
+author: "Rohit Singh Bhandari"
 tags: ["AI", "Claude", "developer tools", "productivity"]
 ---
 
