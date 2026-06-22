@@ -6,8 +6,6 @@ author: "Rohit Singh Bhandari"
 tags: ["AI", "Claude", "developer tools", "productivity"]
 ---
 
-# Using AI Efficiently
-
 The idea behind this blog is simple: to show the tools and skills that make working with AI a lot smoother. We will look at what each one does, how it helps everyday work, and how it quietly saves tokens along the way. We will not go deep into installation here. Each tool has an official GitHub page that walks us through setup far better than we ever could, and the link is right under each heading so one can jump straight to it.
 
 First, a quick word on tokens, since they come up a lot below. Tokens are the unit AI runs on. Everything we send it and everything it sends back is measured in tokens, and that is what we pay for. So when a tool "saves tokens," it really means lower cost, longer working sessions before the AI gets tired or forgetful, and an AI that stays sharp because it is not buried in noise. With that in mind, let us look at the tools.
